@@ -1,10 +1,11 @@
 <?php
 // On démarre la session avant d'écrire du code HTML
+//Sert à la connexion de l'utilisateur, afin de vérifier s'il est bien inscrit sur le site et lui en donner l'accès.
 session_start();
 $_SESSION['lastname'] = 'Pery';
 $_SESSION['firstname'] = 'Elise';
 $_SESSION['age'] = 29;
-?>
+?> 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
     <head>

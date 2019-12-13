@@ -1,6 +1,7 @@
 <?php
 // On démarre la session avant d'écrire du code HTML
 session_start();
+//var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -72,7 +73,11 @@ session_start();
                         <div class="card-body text-center">                      
                             <div class="card-body text-center">
                                 <p>Bonjour et bienvenue
-                                    <?= 'Mademoiselle ' . $_SESSION['lastname'] . '.<br/> Alors ' . $_SESSION['firstname'] . ', aujourd\'hui tu fêtes tes ' . $_SESSION['age'] . ' ans.<br/> Bon anniversaire !!!'; ?> 
+                                    <?php
+                                    if (isset($_SESSION['lastname']) && ($_SESSION['firstname']) && ($_SESSION['age'])) {
+                                        echo 'Mademoiselle ' . $_SESSION['lastname'] . '.<br/> Alors ' . $_SESSION['firstname'] . ', aujourd\'hui tu fêtes tes ' . $_SESSION['age'] . ' ans.<br/> Bon anniversaire !!!';
+                                    }
+                                    ?>
                                 </p>
                             </div> 
                         </div>

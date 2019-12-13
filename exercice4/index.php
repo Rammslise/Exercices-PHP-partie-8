@@ -62,8 +62,8 @@
                             <form method="POST" action="index.php">
                                 <div class="form-row">
                                     <div class="card-body text-center">
-                                        <p>CookieLogin =  <?= $_COOKIE['cookieLogin'] ?></p>
-                                        <p>CookiePassword = <?= $_COOKIE['cookiePassword'] ?></p>                                 
+                                        <p>CookieLogin = <?= isset($_COOKIE['cookieLogin']) ? $_COOKIE['cookieLogin'] : 'Le cookie n\'existe pas' ?></p>
+                                        <p>CookiePassword = <?= isset($_COOKIE['cookiePassword']) ? $_COOKIE['cookiePassword'] : 'Le cookie n\'existe pas' ?></p>                                 
                                     </div>                                                  
                             </form> 
                         </div>
